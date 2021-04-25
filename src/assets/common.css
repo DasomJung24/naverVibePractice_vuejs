@@ -1,0 +1,94 @@
+html,
+body {
+  height: 100% !important;
+  overflow: hidden i !important;
+}
+.base {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.content {
+  width: calc(100% - 280px);
+}
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(25, 25, 25, 0.97);
+  height: 100px;
+  z-index: 999;
+}
+.menu {
+  width: 265px;
+  background-color: black;
+  height: 100%;
+  padding-left: 15px;
+  color: lightgrey;
+  position: relative;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  padding-bottom: 100px;
+}
+.menu::-webkit-scrollbar {
+  display: none;
+}
+li,
+h1,
+h2 {
+  padding: 10px;
+}
+ul {
+  list-style: none;
+  font-size: 20px;
+  padding: 25px 0;
+}
+.menuTitle > h1 {
+  padding: 30px;
+}
+.menuBody > h2 {
+  padding: 15px;
+  margin-right: 20px;
+  border-bottom: 1px solid rgba(25, 25, 25, 0.97);
+  border-top: 1px solid rgba(25, 25, 25, 0.97);
+}
+h1 {
+  color: white;
+}
+.red {
+  color: red;
+}
+.desktopBtn {
+  width: 235px;
+  height: 55px;
+  margin: 12px;
+  background-color: black;
+  color: lightgrey;
+  font-size: 20px;
+  border-radius: 6px;
+  border: 1px solid rgb(60, 60, 60);
+}
+.desktopBtn:hover {
+  cursor: pointer;
+  border: 1px solid white;
+}
+.menuTitle {
+  position: fixed;
+  background-color: black;
+}
+.menuBody {
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+.btn {
+  position: fixed;
+  bottom: 100px;
+  background-color: black;
+}
+.menuList {
+  border-top: 1px solid rgba(25, 25, 25, 0.97);
+  margin-right: 20px;
+}
