@@ -1,14 +1,14 @@
 <template>
   <div class="menu">
     <div class="menuTitle">
-      <h1>VIBE</h1>
+      <h1 class="vibe">VIBE</h1>
     </div>
     <div class="menuBody">
       <h2>user</h2>
       <ul>
         <li class="red">투데이</li>
         <li>차트</li>
-        <li>DJ스테이션</li>
+        <li>DJ 스테이션</li>
         <li>VIBE MAG</li>
         <li>이달의 노래</li>
       </ul>

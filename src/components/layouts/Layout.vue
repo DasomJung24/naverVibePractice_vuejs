@@ -1,6 +1,10 @@
 <template>
   <div class="base">
-    <div class="content">content</div>
+    <div class="content">
+      <template>
+        <router-view />
+      </template>
+    </div>
     <Menu />
     <Player />
   </div>
