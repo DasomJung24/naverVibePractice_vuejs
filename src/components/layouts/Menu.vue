@@ -5,14 +5,14 @@
     </div>
     <div class="menuBody">
       <h2>user</h2>
-      <ul>
+      <ul class="topUl">
         <li class="red">투데이</li>
         <li>차트</li>
         <li>DJ 스테이션</li>
         <li>VIBE MAG</li>
         <li>이달의 노래</li>
       </ul>
-      <ul>
+      <ul class="ulPd">
         <li style="color: rgb(60, 60, 60); font-size: 17px;">보관함</li>
         <li>믹스테잎</li>
         <li>노래</li>
@@ -22,8 +22,8 @@
         <li>받은노래</li>
         <li>구매한 MP3</li>
       </ul>
-      <ul class="menuList">
-        <li>#내동내듣</li>
+      <ul class="menuList ulPd">
+        <li>#내돈내듣</li>
         <li>ON STAGE</li>
         <li>서비스 소개</li>
         <li>멤버십 구독</li>
