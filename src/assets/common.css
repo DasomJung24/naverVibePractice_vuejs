@@ -11,6 +11,12 @@ body {
 }
 .content {
   width: calc(100% - 280px);
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  padding-bottom: 100px;
+}
+.content::-webkit-scrollbar {
+  display: none;
 }
 .player {
   position: fixed;
@@ -28,7 +34,6 @@ body {
   height: 100%;
   padding-left: 15px;
   color: lightgrey;
-  position: relative;
   overflow-y: scroll;
   -ms-overflow-style: none;
   padding-bottom: 100px;
@@ -37,14 +42,19 @@ body {
   display: none;
 }
 li,
-h1,
+.vibe,
 h2 {
   padding: 10px;
 }
 ul {
   list-style: none;
   font-size: 20px;
-  padding: 25px 0;
+}
+.ulPd {
+  padding: 30px 0;
+}
+.topUl {
+  padding-top: 40px;
 }
 .menuTitle > h1 {
   padding: 30px;
@@ -55,7 +65,7 @@ ul {
   border-bottom: 1px solid rgba(25, 25, 25, 0.97);
   border-top: 1px solid rgba(25, 25, 25, 0.97);
 }
-h1 {
+.vibe {
   color: white;
 }
 .red {
@@ -78,10 +88,12 @@ h1 {
 .menuTitle {
   position: fixed;
   background-color: black;
+  width: 260px;
 }
 .menuBody {
-  margin-top: 100px;
-  margin-bottom: 80px;
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 80px;
 }
 .btn {
   position: fixed;
@@ -91,4 +103,115 @@ h1 {
 .menuList {
   border-top: 1px solid rgba(25, 25, 25, 0.97);
   margin-right: 20px;
+}
+.musicIcon {
+  margin: 22px 30px;
+  width: 52px;
+  height: 52px;
+  background-color: grey;
+  text-align: center;
+}
+.music {
+  padding-top: 15px;
+}
+.topContent {
+  background-color: #f5f5f5;
+}
+.topContent > img {
+  width: 34%;
+}
+.topBox {
+  background-color: white;
+  padding: 6% 5%;
+  width: 66%;
+}
+.pd {
+  padding: 3% 6%;
+}
+.flex {
+  display: flex;
+}
+.text {
+  font-size: 20px;
+  font-weight: bold;
+}
+.pt-10 {
+  padding-top: 10px;
+}
+.mr-15 {
+  margin-right: 15px;
+}
+.ml-15 {
+  margin-left: 15px;
+}
+.mt-5 {
+  margin-top: 5px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mr-30 {
+  margin-right: 30px;
+}
+.topChip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33px;
+  width: 90px;
+  background-color: rgb(131, 7, 232);
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.topText {
+  margin: 3% 0;
+  font-size: 34px;
+  font-weight: 800;
+}
+.topSub {
+  line-height: 25px;
+  font-size: 17px;
+}
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+.slide {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+.po-absolute {
+  position: absolute;
+}
+.arrow-l-1 {
+  top: 160px;
+}
+.arrow-r-1 {
+  right: 0;
+  top: 160px;
+}
+.arrow-l-2 {
+  top: 100px;
+}
+.arrow-r-2 {
+  right: 0;
+  top: 100px;
+}
+.itemTitle {
+  font-size: 20px;
+}
+.textGrey {
+  color: grey;
+}
+.divide {
+  border: solid #f7f7f7 1px;
+  margin: 20px 70px;
+}
+.of-hidden {
+  overflow: hidden;
+  height: 200px;
 }

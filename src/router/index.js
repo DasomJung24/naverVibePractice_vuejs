@@ -7,7 +7,18 @@ const routes = [
   {
     path: "/",
     name: "Main",
+    redirect: "mainContent",
     component: () => import("../components/layouts/Layout.vue"),
+    children: [
+      {
+        name: "MainContent",
+        path: "mainContent",
+        meta: {
+          name: "메인콘텐츠",
+        },
+        component: () => import("../views/MainContent.vue"),
+      },
+    ],
   },
 ];
 

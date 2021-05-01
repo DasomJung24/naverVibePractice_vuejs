@@ -1,6 +1,11 @@
 <template>
   <div class="menu">
     <div class="menuTitle">
+      <font-awesome-icon
+        icon="search"
+        size="2x"
+        class="search floatRight mr-30 mt-30"
+      />
       <h1 class="vibe">VIBE</h1>
     </div>
     <div class="menuBody">
