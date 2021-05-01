@@ -12,7 +12,7 @@ const routes = [
     children: [
       {
         name: "MainContent",
-        path: "mainContent",
+        path: "/",
         meta: {
           name: "메인콘텐츠",
         },

@@ -4,9 +4,10 @@
       <font-awesome-icon
         icon="search"
         size="2x"
-        class="search floatRight mr-30 mt-30"
+        class="floatRight mr-30 mt-30 searchBtn"
+        @click="search"
       />
-      <h1 class="vibe">VIBE</h1>
+      <h1 class="vibe"><span>NAVER</span>VIBE</h1>
     </div>
     <div class="menuBody">
       <h2>user</h2>
@@ -42,5 +43,12 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {},
+  methods: {
+    search() {
+      this.$store.commit("changeSearch");
+    },
+  },
+};
 </script>

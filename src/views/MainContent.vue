@@ -1,5 +1,14 @@
 <template>
   <div>
+    <div
+      class="search"
+      v-bind:class="{ disableSearch: !$store.getters.getSearchBtn }"
+    >
+      <div class="relative">
+        <font-awesome-icon icon="search" size="2x" class="absolute" />
+        <input class="input" placeholder="VIBE 검색" />
+      </div>
+    </div>
     <div class="topContent flex pd">
       <img
         src="https://music-phinf.pstatic.net/20210426_16/1619426911299QOBE6_JPEG/7.jpg"
@@ -17,23 +26,7 @@
     </div>
     <div class="pd">
       <p class="text">매거진 ></p>
-      <div class="slide pt-10 flex">
-        <font-awesome-icon
-          icon="arrow-left"
-          size="lg"
-          class="arrow-l-1 po-absolute"
-        />
-        <div class="floatLeft mr-15" v-for="item in magazine" :key="item.id">
-          <img height="350" width="350" :src="item.image" />
-          <p class="itemTitle mt-5" v-html="item.title"></p>
-          <p class="mt-5 textGrey">{{ item.date }}</p>
-        </div>
-        <font-awesome-icon
-          icon="arrow-right"
-          size="lg"
-          class="arrow-r-1 po-absolute"
-        />
-      </div>
+      <CardComponent :data="data" />
     </div>
     <div class="divide"></div>
     <div class="pd">
@@ -44,7 +37,7 @@
           size="lg"
           class="arrow-l-2 po-absolute"
         />
-        <div class="floatLeft mr-15" v-for="item in magazine" :key="item.id">
+        <div class="floatLeft mr-15" v-for="item in data" :key="item.id">
           <div class="of-hidden">
             <img width="350" :src="item.image" />
           </div>
@@ -61,13 +54,7 @@
     <div class="divide"></div>
     <div class="pd">
       <p class="text">내 취향 플레이리스트 ></p>
-      <div class="pt-10 flex">
-        <div class="floatLeft mr-15" v-for="item in magazine" :key="item.id">
-          <img width="200" height="200" :src="item.image" />
-          <p class="itemTitle mt-5" v-html="item.title"></p>
-          <p class="mt-5 textGrey">{{ item.date }}</p>
-        </div>
-      </div>
+      <SmallCardComponent :data="data" />
     </div>
   </div>
 </template>
@@ -75,7 +62,7 @@
 export default {
   data() {
     return {
-      magazine: [
+      data: [
         {
           id: 1,
           image:
@@ -113,6 +100,10 @@ export default {
         },
       ],
     };
+  },
+  components: {
+    CardComponent: () => import("@/components/cards/Card.vue"),
+    SmallCardComponent: () => import("@/components/cards/SmallCard.vue"),
   },
 };
 </script>
