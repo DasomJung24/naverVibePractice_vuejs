@@ -148,6 +148,10 @@ ul {
 .text {
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 10px;
+}
+.firstContent {
+  margin-top: 40px;
 }
 .pt-10 {
   padding-top: 10px;
@@ -288,4 +292,29 @@ h1 > span {
 }
 .playerText > p {
   color: grey;
+}
+.centerPlay {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightPlay {
+  width: 450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.listPlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  padding-left: 40px;
+  border-left: solid grey 1px;
+}
+.playBar {
+  width: 140px;
+  height: 3px;
+  background-color: grey;
 }

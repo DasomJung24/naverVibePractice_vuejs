@@ -5,8 +5,14 @@
       v-bind:class="{ disableSearch: !$store.getters.getSearchBtn }"
     >
       <div class="relative">
-        <font-awesome-icon icon="search" size="2x" class="absolute" />
+        <font-awesome-icon icon="search" size="2x" class="absoluteSearch" />
         <input class="input" placeholder="VIBE 검색" />
+        <font-awesome-icon
+          icon="times"
+          size="2x"
+          class="absoluteTimes"
+          @click="closeSearch"
+        />
       </div>
     </div>
     <div class="topContent flex pd">
@@ -24,32 +30,14 @@
         <p class="topSub mt-5">VIBE MAG 2021.04.26</p>
       </div>
     </div>
-    <div class="pd">
+    <div class="pd firstContent">
       <p class="text">매거진 ></p>
       <CardComponent :data="data" />
     </div>
     <div class="divide"></div>
     <div class="pd">
       <p class="text">News</p>
-      <div class="slide pt-10 flex">
-        <font-awesome-icon
-          icon="arrow-left"
-          size="lg"
-          class="arrow-l-2 po-absolute"
-        />
-        <div class="floatLeft mr-15" v-for="item in data" :key="item.id">
-          <div class="of-hidden">
-            <img width="350" :src="item.image" />
-          </div>
-          <p class="itemTitle mt-5" v-html="item.title"></p>
-          <p class="mt-5 textGrey">{{ item.date }}</p>
-        </div>
-        <font-awesome-icon
-          icon="arrow-right"
-          size="lg"
-          class="arrow-r-2 po-absolute"
-        />
-      </div>
+      <FlatCardComponent :data="data" />
     </div>
     <div class="divide"></div>
     <div class="pd">
@@ -104,6 +92,12 @@ export default {
   components: {
     CardComponent: () => import("@/components/cards/Card.vue"),
     SmallCardComponent: () => import("@/components/cards/SmallCard.vue"),
+    FlatCardComponent: () => import("@/components/cards/FlatCard.vue"),
+  },
+  methods: {
+    closeSearch() {
+      this.$store.commit("changeSearch");
+    },
   },
 };
 </script>
