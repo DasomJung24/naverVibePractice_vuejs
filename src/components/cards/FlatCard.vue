@@ -2,13 +2,14 @@
   <swiper
     class="swiper"
     :options="swiperOptions"
-    @swiper="onSwiper"
     @sliceChange="onSlideChange"
     @ready="on"
   >
     <swiper-slide v-for="item in data" :key="item.id">
       <div>
-        <img height="200" width="200" :src="item.image" />
+        <div class="of-hidden">
+          <img width="350" :src="item.image" />
+        </div>
         <p class="itemTitle mt-5" v-html="item.title"></p>
         <p class="mt-5 textGrey">{{ item.date }}</p>
       </div>
@@ -20,7 +21,7 @@
 <script>
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 export default {
-  name: "SmallCardComponent",
+  name: "FlatCardComponent",
   props: { data: Array },
   components: {
     Swiper,
@@ -29,7 +30,24 @@ export default {
   data() {
     return {
       swiperOptions: {
-        slidesPerView: 5,
+        breakpoints: {
+          800: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          600: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1600: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        },
         spaceBetween: 30,
         loop: false,
         pagination: {
@@ -46,9 +64,6 @@ export default {
   methods: {
     on(swiper) {
       console.log("ready", swiper);
-    },
-    onSwiper(swiper) {
-      console.log(swiper);
     },
     onSlideChange() {
       console.log("slide change");
