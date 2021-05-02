@@ -10,6 +10,9 @@
 <script>
 export default {
   name: "SmallCardComponent",
-  props: ["data"],
+  props: { data: Array },
+  data() {
+    return {};
+  },
 };
 </script>
