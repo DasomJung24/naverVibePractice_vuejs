@@ -7,16 +7,16 @@ const routes = [
   {
     path: "/",
     name: "Main",
-    redirect: "mainContent",
+    redirect: "/today",
     component: () => import("../components/layouts/Layout.vue"),
     children: [
       {
-        name: "MainContent",
-        path: "/",
+        name: "Today",
+        path: "/today",
         meta: {
-          name: "메인콘텐츠",
+          name: "투데이",
         },
-        component: () => import("../views/MainContent.vue"),
+        component: () => import("../views/Today.vue"),
       },
     ],
   },
