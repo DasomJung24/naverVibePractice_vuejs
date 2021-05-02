@@ -10,13 +10,23 @@
       <h1 class="vibe"><span>NAVER</span>VIBE</h1>
     </div>
     <div class="menuBody">
-      <h2>user</h2>
+      <div class="user">
+        <font-awesome-icon icon="user-circle" size="3x" />
+        <h2>user</h2>
+      </div>
       <ul class="topUl">
-        <li class="red">투데이</li>
-        <li>차트</li>
-        <li>DJ 스테이션</li>
-        <li>VIBE MAG</li>
-        <li>이달의 노래</li>
+        <li
+          class="red"
+          @click="$router.push({ name: 'Today' }).catch(() => {})"
+        >
+          <font-awesome-icon icon="headphones" size="lg" /> 투데이
+        </li>
+        <li><font-awesome-icon icon="trophy" size="lg" /> 차트</li>
+        <li><font-awesome-icon icon="compact-disc" size="lg" /> DJ 스테이션</li>
+        <li><font-awesome-icon icon="sticky-note" size="lg" /> VIBE MAG</li>
+        <li>
+          <font-awesome-icon icon="calendar-check" size="lg" /> 이달의 노래
+        </li>
       </ul>
       <ul class="ulPd">
         <li style="color: rgb(60, 60, 60); font-size: 17px;">보관함</li>
@@ -44,7 +54,9 @@
 </template>
 <script>
 export default {
-  data() {},
+  data() {
+    return {};
+  },
   methods: {
     search() {
       this.$store.commit("changeSearch");

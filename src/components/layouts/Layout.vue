@@ -10,10 +10,13 @@
 <script>
 export default {
   name: "Layout",
+  data() {
+    return {};
+  },
   components: {
     Menu: () => import("@/components/layouts/Menu.vue"),
     Player: () => import("@/components/layouts/Player.vue"),
-    Content: () => import("@/views/MainContent.vue"),
+    Content: () => import("@/views/Today.vue"),
   },
 };
 </script>
