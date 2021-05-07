@@ -1,10 +1,5 @@
 <template>
-  <swiper
-    class="swiper"
-    :options="swiperOptions"
-    @sliceChange="onSlideChange"
-    @ready="on"
-  >
+  <swiper class="swiper" :options="swiperOptions">
     <swiper-slide v-for="item in data" :key="item.id">
       <div>
         <img height="350" width="350" :src="item.image" />
@@ -59,13 +54,6 @@ export default {
       },
     };
   },
-  methods: {
-    on(swiper) {
-      console.log("ready", swiper);
-    },
-    onSlideChange() {
-      console.log("slide change");
-    },
-  },
+  methods: {},
 };
 </script>
