@@ -18,6 +18,14 @@ const routes = [
         },
         component: () => import("../views/Today.vue"),
       },
+      {
+        name: "Chart",
+        path: "/chart",
+        meta: {
+          name: "차트",
+        },
+        component: () => import("../views/Chart.vue"),
+      },
     ],
   },
 ];
