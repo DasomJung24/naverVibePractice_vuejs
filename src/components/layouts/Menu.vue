@@ -21,7 +21,9 @@
         >
           <font-awesome-icon icon="headphones" size="lg" /> 투데이
         </li>
-        <li><font-awesome-icon icon="trophy" size="lg" /> 차트</li>
+        <li @click="$router.push({ name: 'Chart' }).catch(() => {})">
+          <font-awesome-icon icon="trophy" size="lg" /> 차트
+        </li>
         <li><font-awesome-icon icon="compact-disc" size="lg" /> DJ 스테이션</li>
         <li><font-awesome-icon icon="sticky-note" size="lg" /> VIBE MAG</li>
         <li>

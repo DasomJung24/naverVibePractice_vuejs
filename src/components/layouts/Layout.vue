@@ -1,7 +1,7 @@
 <template>
   <div class="base">
     <div class="content">
-      <Content />
+      <router-view></router-view>
     </div>
     <Menu />
     <Player />
@@ -16,7 +16,6 @@ export default {
   components: {
     Menu: () => import("@/components/layouts/Menu.vue"),
     Player: () => import("@/components/layouts/Player.vue"),
-    Content: () => import("@/views/Today.vue"),
   },
 };
 </script>
