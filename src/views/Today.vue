@@ -1,20 +1,6 @@
 <template>
   <div>
-    <div
-      class="search"
-      v-bind:class="{ disableSearch: !$store.getters.getSearchBtn }"
-    >
-      <div class="relative">
-        <font-awesome-icon icon="search" size="2x" class="absoluteSearch" />
-        <input class="input" placeholder="VIBE 검색" />
-        <font-awesome-icon
-          icon="times"
-          size="2x"
-          class="absoluteTimes"
-          @click="closeSearch"
-        />
-      </div>
-    </div>
+    <Search />
     <div class="topContent flex pd">
       <img
         src="https://music-phinf.pstatic.net/20210426_16/1619426911299QOBE6_JPEG/7.jpg"
@@ -93,11 +79,8 @@ export default {
     CardComponent: () => import("@/components/cards/Card.vue"),
     SmallCardComponent: () => import("@/components/cards/SmallCard.vue"),
     FlatCardComponent: () => import("@/components/cards/FlatCard.vue"),
+    Search: () => import("@/components/layouts/Search.vue"),
   },
-  methods: {
-    closeSearch() {
-      this.$store.commit("changeSearch");
-    },
-  },
+  methods: {},
 };
 </script>
